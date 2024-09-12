@@ -1,0 +1,106 @@
+.echart-container {
+  width: 100%;
+  height: 300px;
+  // background-color: azure;
+}
+
+.tages {
+  position: relative;
+}
+
+.hedtages {
+  position: absolute;
+  top: 20%;
+  right: 1%;
+  transform: translateX(-50%);
+  padding: 5px;
+  color: rgb(46, 44, 44);
+  // color: #333;
+  // font-size: 14px;
+  text-align: center;
+  // font: 600px;
+}
+
+.hedtages h5{
+  color: #858282;
+}
+
+.hedselect {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  // transform: translateX(-50%);
+  background-color: #ddd;
+  padding: 3px;
+  border-radius: 5px;
+  // color: #333;
+  font-size: 14px;
+  border: 1px solid #ffffff;
+}
+
+
+
+// -----------------------------------------------
+
+@media only screen and (min-width: 300px) and (max-width: 479px),
+only screen and (min-width: 480px) and (max-width: 767px) {
+ 
+
+  .hedtages {
+    font-size: 12px;
+  }
+
+  .hedselect {
+    font-size: 12px;
+  }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  
+
+  .hedtages {
+    font-size: 14px;
+  }
+
+  .hedselect {
+    font-size: 14px;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  
+
+  .hedtages {
+    font-size: 16px;
+  }
+
+  .hedselect {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+ 
+
+  .hedtages {
+    font-size: 18px;
+  }
+
+  .hedselect {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1920px) and (max-width: 2000px) {
+
+
+  .hedtages {
+    font-size: 20px;
+  }
+
+  .hedselect {
+    font-size: 20px;
+  }
+}

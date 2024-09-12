@@ -1,0 +1,17 @@
+  <div class="container">
+    <div class="tages">
+        <div class="hedtages">
+          <span style="font-weight: bold;">احصائيات استخدام القسيمة</span>
+          <p>2023,أ05,2032أغسطس,05 يوليو</p>
+        </div>
+      <div class="hedselect">
+        <select>
+          <option value="">سنويا</option>
+          <option value="1">يوميا</option>
+          <option value="2">شهريا</option>
+          <option value="3">اسبوعى</option>
+        </select>
+      </div>
+    </div>
+    <div echarts [options]="chartOptions" class="echart-container"></div>
+  </div>

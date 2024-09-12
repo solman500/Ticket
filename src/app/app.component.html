@@ -1,0 +1,56 @@
+<div class="contai">
+  <div class="left">
+    <mat-icon style="margin-left: 5px">edit</mat-icon>
+    <span style="margin-left: 5px">تعديل</span>
+    <!-- <button type="button"><mat-icon >edit</mat-icon>تعديل</button> -->
+  </div>
+
+  <div class="right">
+    <mat-icon
+      style="
+        background-color: rgb(250, 246, 246);
+        border-radius: 4px;
+        margin-left: 5px;
+      "
+      >arrow_forward</mat-icon
+    >
+    <h6>تذكرة رقم #2342</h6>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="card">
+    <app-card></app-card>
+  </div>
+  <div class="chart">
+    <app-chart></app-chart>
+  </div>
+</div>
+
+<div class="controls-container">
+    <div class="left-controls">
+      <button class="new-ticket-button">حجز تذكرة جديدة</button>
+      <div class="toggle-container">
+        <label for="ticket-toggle">مفعلة</label>
+        <input type="checkbox" id="ticket-toggle" class="toggle-switch" />
+      </div>
+    </div>
+    
+    <div class="right-controls">
+      <div class="search-container">
+        <label for="inputla" class="search-label">مبيعات التذاكر</label>
+        <input type="text" id="inputla" placeholder="بحث" class="search-input" />
+        <button class="sort-button">
+          <mat-icon>sort</mat-icon>
+        </button>
+        <button class="filter-button">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <app-table></app-table>
+
+

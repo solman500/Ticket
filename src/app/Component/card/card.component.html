@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="tictag">
+    <div class="icohead">
+      <!-- pTooltip="صيدناوى مول ,برج العرب" tooltipPosition="top" -->
+      <mat-icon class="iconss" pTooltip="حذف" tooltipPosition="top" style="cursor: pointer;">delete</mat-icon>
+
+      <h1 class="ticket-header">عرض التذكرة الخاصة بالفيلم</h1>
+    </div>
+
+    <div class="copy-section">
+      <div class="styled-header">
+        <mat-icon class="copy-icon" (click)="copyLink()" style="cursor: pointer;">content_copy</mat-icon>
+        <span class="link-text">{{ linkToCopy }}</span>
+      </div>
+    </div>
+    <h5 class="validity-date">فعال حتى 15 يوليو 2023</h5>
+  </div>
+  
+  <div class="dashed-line"></div>
+
+  <div class="footer-section">
+    <div class="qrcode-wrapper">
+      <qrcode class="qrcodes" [qrdata]="linkToCopy"></qrcode>
+    </div>
+    <button class="share-button">
+      مشاركة<mat-icon class="share-icon">share</mat-icon> 
+    </button>
+    <div class="discount-section">
+      <div class="discount-label">خصم</div>
+      <div class="discount-value">25%</div>
+    </div>
+  </div>
+</div>

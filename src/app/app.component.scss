@@ -1,0 +1,255 @@
+.contai {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  margin-top: 25px;
+  flex-direction: row-reverse;
+}
+
+.left {
+  margin-top: 25px;
+  margin-left: 2%;
+  background-color: #e6e3e3;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  flex: 0 0 25%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.chart {
+  flex: 0 0 75%;
+  background-color: #ecebeb;
+  padding: 10px;
+  border: 1px solid rgb(5, 80, 241);
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.left-controls, .right-controls {
+  display: flex;
+  align-items: center;
+}
+
+.new-ticket-button {
+  background-color: #6a5acd; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+-------------------------
+.toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-container label {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  
+  .toggle-switch {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-switch:checked {
+    background-color: #6a5acd;
+  }
+  
+  .toggle-switch:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-switch:checked:before {
+    transform: translateX(20px);
+  }
+  
+  .right-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+
+---------------------
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-label {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #6c757d;
+  padding-left: 10px;
+}
+
+.search-input {
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  outline: none;
+  flex-grow: 1;
+}
+
+.sort-button, .filter-button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.sort-button mat-icon, .filter-button mat-icon {
+  font-size: 20px;
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+
+@media only screen and (max-width: 767px) {
+  .contai {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left, .right {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .card, .chart {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  .controls-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .new-ticket-button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .contai {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .main-content {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 0 0 30%;
+  }
+
+  .chart {
+    flex: 0 0 65%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .contai {
+    padding: 20px;
+  }
+
+  .main-content {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 0 0 30%;
+  }
+
+  .chart {
+    flex: 0 0 65%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .contai {
+    padding: 20px;
+  }
+
+  .main-content {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 0 0 25%;
+  }
+
+  .chart {
+    flex: 0 0 70%;
+  }
+}

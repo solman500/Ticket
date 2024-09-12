@@ -1,0 +1,55 @@
+<p-table
+  [value]="filteredTickets"
+  [paginator]="false"
+  [rows]="5"
+  [rowsPerPageOptions]="[5, 10, 20]"
+  responsiveLayout="scroll"
+  class="rtl-table"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#</th>
+      <th>المستخدم</th>
+      <th>رقم التذكرة</th>
+      <th>
+        قيمة التذكرة
+
+        <button (click)="sortTickets('asc')">↑</button>
+        <button (click)="sortTickets('desc')">↓</button>
+      </th>
+      <th>السينمات</th>
+      <th>عدد الأشخاص</th>
+      <th>عدد مرات الشراء</th>
+      <th>التذكرة</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-ticket>
+    <tr>
+      <td>{{ ticket.id }}</td>
+
+      <td>{{ ticket.user.name }}</td>
+      <td>{{ ticket.ticketNumber }}</td>
+      <td>{{ ticket.ticketValue }}</td>
+      <td>
+        <span pTooltip="صيدناوى مول ,برج العرب" tooltipPosition="top">{{
+          ticket.cinemas
+        }}</span>
+      </td>
+      <td>{{ ticket.peopleCount }}</td>
+      <td>{{ ticket.purchaseCount }}</td>
+      <td>
+        <a href="{{ ticket.ticketLink }}" target="_blank">
+            <mat-icon>download</mat-icon> {{ ticket.ticketName }}
+        </a>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-paginator
+  [rows]="5"
+  [totalRecords]="totalTickets"
+  [rowsPerPageOptions]="[5, 10, 20]"
+  aria-label="Select page"
+></p-paginator>
